@@ -13,9 +13,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        Intent intent = new Intent(this, SubActivity.class);
+        Intent intent =  getRetrofitIntent();
         startActivity(intent);
+    }
 
+    private Intent getRecyclerViewIntent() {
+        return new Intent(this, SubActivity.class);
+    }
+
+    private Intent getRetrofitIntent() {
+        return new Intent(this, com.doyoon.androidcookbookv2.libs.retrofit.SubActivity.class);
     }
 }

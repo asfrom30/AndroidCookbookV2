@@ -10,9 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.doyoon.androidcookbookv2.CookbookActivity;
 import com.doyoon.androidcookbookv2.R;
 
-public class SubActivity extends AppCompatActivity {
+public class SubActivity extends CookbookActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,10 @@ public class SubActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.apis_recycler_view_main_layout);
 
+        main();
+    }
+
+    public void main() {
         inflateRecyclerView();
     }
 
@@ -34,6 +39,8 @@ public class SubActivity extends AppCompatActivity {
         RecyclerView.Adapter adapter = new CustomAdapter(dummyDataset);
         recyclerView.setAdapter(adapter);
     }
+
+
 
     public class CustomAdapter extends  RecyclerView.Adapter<CustomViewHolder> {
         private String[] dataset;
