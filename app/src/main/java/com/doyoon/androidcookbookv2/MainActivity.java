@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent =  getRetrofitIntent();
+        Intent intent =  getSQLiteIntent();
         startActivity(intent);
     }
 
@@ -23,5 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
     private Intent getRetrofitIntent() {
         return new Intent(this, com.doyoon.androidcookbookv2.libs.retrofit.SubActivity.class);
+    }
+
+    private Intent getSQLiteIntent() {
+        return new Intent(this, com.doyoon.androidcookbookv2.libs.sqlite.SubActivity.class);
     }
 }

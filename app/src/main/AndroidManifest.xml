@@ -23,6 +23,10 @@
             android:label="Retrofit"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
+            android:name=".libs.sqlite.SubActivity"
+            android:label="SQLite"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".apis.recycler.view.SubActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar"></activity>
