@@ -13,7 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent =  getSQLiteIntent();
+//        Intent intent =  getSQLiteIntent();
+        Intent intent = getViewPagerIntent();
         startActivity(intent);
     }
 
@@ -27,5 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
     private Intent getSQLiteIntent() {
         return new Intent(this, com.doyoon.androidcookbookv2.libs.sqlite.SubActivity.class);
+    }
+
+    private Intent getViewPagerIntent() {
+        return new Intent(this, com.doyoon.androidcookbookv2.apis.view.pager.SubActivity.class);
     }
 }
